@@ -147,6 +147,10 @@ public class Calculator extends JFrame {
 
                 // JOptionPane.showMessageDialog(null, "text:出题");
                 String num = jtf.getText();
+                if(jtf.getText().length() == 0){
+                    JOptionPane.showMessageDialog(null,"请输入正确的题数！");
+                    jtf.setText("5");  //在题数错误输入的情况下默认将题数设置为5，可自由更改
+                }
                 int num_i = Integer.parseInt(num);  //数据类型转换
                 if(num_i != 1&num_i != 2&num_i != 3&num_i != 4&num_i != 5&num_i != 6){
                     JOptionPane.showMessageDialog(null,"请输入正确的题数！");
@@ -180,6 +184,9 @@ public class Calculator extends JFrame {
                     answer[i] = 0;
                     result[i] = 0;
                     String answer_s = jtfa_arr[i].getText();
+                    if(jtfa_arr[i].getText().length() == 0){
+                        JOptionPane.showMessageDialog(null,"存在未完成题目，请继续作答");
+                    }
                     answer[i] = Double.parseDouble(answer_s) ;  //数据类型转换
                     result[i] = Arithmetic.arithmetic(ss[i]);
                     if(answer[i]==result[i]){
@@ -187,9 +194,6 @@ public class Calculator extends JFrame {
                     }
                     count_tol=count_tol+count[i];
                 }
-
-
-
                 int dcount = num_i-count_tol;
                 jlb1.setText("你答对了"+count_tol+"道题;答错了"+dcount+"道题！");
                 jlb3.setText("参考答案：");
