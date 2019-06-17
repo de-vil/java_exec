@@ -6,7 +6,7 @@ public class Demo3 {
     public static void main(String[] args){
         String[] names={"a","b","c","d","e","f"};
         Random random = new Random();
-        int[] indexs = new int[6];
+        int [] indexs = new int[6];
         for(int i =0; i < names.length;i++){
             int index = random.nextInt(6);
             //判断下标是否重复，如果有需要重新生成
@@ -24,10 +24,11 @@ public class Demo3 {
                     indexs[i]=index;
                 }
             }
-            for(int k = 0;k < indexs.length;k++){
-                int j = indexs[k];
-                System.out.println(names[j]);
-            }
+
+        }
+        for(int k = 0;k < indexs.length;k++){
+            int j = indexs[k];
+            System.out.println(names[j]);
         }
     }
 }
