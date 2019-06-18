@@ -1,4 +1,4 @@
-package java2019_6.day2;
+package java2019_6.day2.test1;
 
 public class Demo2 {
     public static void main(String[] args){
