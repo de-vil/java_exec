@@ -28,8 +28,6 @@ public class DichroicBall {
             }
         }
 
-
-
         System.out.print("红球：");
         for(int k = 0;k < 6;k++){
             int j = reds[k];
