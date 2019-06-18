@@ -5,7 +5,12 @@ package java2019_6.day2_homework;
  * 指挥官类中有发起攻击的命令方法，调用不同士兵的攻击的方法
  */
 
+/**
+ * 士兵类
+ */
 public class Soldier {
+
+    String name;
 
     public void attack(){
     }
